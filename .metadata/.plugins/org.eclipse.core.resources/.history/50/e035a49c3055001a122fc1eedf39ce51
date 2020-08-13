@@ -1,0 +1,49 @@
+package com.bhyh.controller;
+
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import com.bhyh.common.core.controller.CommonController;
+import com.bhyh.result.ResultUtils;
+import com.bhyh.service.IDhThermalCameralService;
+
+@RestController
+@RequestMapping("/DhThermalCameraController")
+public class DhThermalCameraController extends CommonController{
+	@Autowired
+	private IDhThermalCameralService dhThermalCameralService;
+	@RequestMapping("/login")
+	public Object login(@RequestBody Map<String, String> map) {
+		try {
+			String ip = map.get("ip");
+			int port = Integer.valueOf(map.get("port"));
+			String userNm = map.get("userNm");
+			String pwd = map.get("pwd");
+			Object result = dhThermalCameralService.login(ip, port, userNm, pwd);
+			return ResultUtils.success(result);
+		}catch(Exception e) {
+			log.info("登录失败", e); 
+			return ResultUtils.error(1, e.getMessage());
+		}
+	}
+	
+	@RequestMapping("/queryHistoryInfo")
+	public Object queryHistoryInfo(@RequestBody Map<String, Object> map) {
+		try {
+			String startTime = (String) map.get("startTime");
+			String endTime = (String) map.get("endTime");
+			int meterType = map.get("meterType");
+			int channel = (Integer)(Integer) map.get("channel");
+			int index = (Integer)(Integer) map.get("index");
+			dhThermalCameralService.setStuStartFind(startTime, endTime, meterType, channel, index)
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		return null;
+	}
+	
+	
+}//end

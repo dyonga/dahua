@@ -1,0 +1,22 @@
+Begin Time:2020-02-17 16:37:45.750
+[2020-02-17 16:37:45.750][P:180568/T:179700][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=0000000020CF0110, dwUser=0000000000000000].
+[2020-02-17 16:37:45.750][P:180568/T:179700][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2020-02-17 16:37:45.750][P:180568/T:179700][dhnetsdk.cpp:206][Info][0] Enter CLIENT_SetConnectTime:[nWaitTime=5000, nTryTimes=1].
+[2020-02-17 16:37:45.750][P:180568/T:179700][dhnetsdk.cpp:219][Info][0] Leave CLIENT_SetConnectTime.
+[2020-02-17 16:37:45.750][P:180568/T:179700][dhnetsdk.cpp:230][Info][0] Enter CLIENT_SetNetworkParam:[nWaittime=0, nConnectTime=10000, nConnectTryNum=0, nSubConnectSpaceTime=0, nGetDevInfoTime=0, nConnectBufSize=0, nGetConnInfoTime=3000, nSearchRecordTime=0, nsubDisconnetTime=0, byNetType=0, byPlaybackBufSize=0, bDetectDisconnTime=0, bKeepLifeInterval=0, nPicBufSize=0].
+[2020-02-17 16:37:45.750][P:180568/T:179700][dhnetsdk.cpp:245][Info][0] Leave CLIENT_SetNetworkParam.
+[2020-02-17 16:38:45.630][P:180568/T:179700][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=192.168.1.106, port=37777, SpeCap=0, lpDeviceInfo=00000000021BE190.]
+[2020-02-17 16:38:45.813][P:180568/T:179700][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=550621856.]
+[2020-02-17 16:39:06.022][P:180568/T:179700][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=550621856. nChannelID=0. rType=0]
+[2020-02-17 16:39:06.066][P:180568/T:179700][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 37777
+[2020-02-17 16:39:06.097][P:180568/T:179700][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=550630880]
+[2020-02-17 16:39:10.117][P:180568/T:179700][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=550621856. nChannelID=1. rType=0]
+[2020-02-17 16:39:10.123][P:180568/T:179700][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 37777
+[2020-02-17 16:39:10.152][P:180568/T:179700][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=551184784]
+[2020-02-17 16:40:53.285][P:180568/T:179700][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=551184784.]
+[2020-02-17 16:40:53.290][P:180568/T:179700][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2020-02-17 16:43:39.493][P:180568/T:179700][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=550630880.]
+[2020-02-17 16:43:39.497][P:180568/T:179700][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2020-02-17 16:43:39.497][P:180568/T:179700][dhnetsdk.cpp:811][Info][0] Enter CLIENT_Logout. [lLoginID=550621856.]
+[2020-02-17 16:43:39.498][P:180568/T:179700][TPTCPClient.cpp:514][Error][90010007] Device is not online, ip:192.168.1.106
+[2020-02-17 16:43:39.498][P:180568/T:179700][dhnetsdk.cpp:833][Info][0] Leave CLIENT_Logout. [ret=1]

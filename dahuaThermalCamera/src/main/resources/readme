@@ -1,0 +1,16 @@
+您可使用 Authorization header将身份验证信息添加到请求中，Authorization header包含以下信息：
+
+用于签名的算法 (AWS4-HMAC-SHA256)
+凭证范围（包含您的访问密钥 ID）
+参与签名计算的header列表
+计算签名。该签名基于您的请求信息，由您使用金山云Secret Key生成。该签名用于向 金山云 确认您的身份。
+以下是添加了签名信息的请求：
+   GET /?Action=ClassifyTerrorismImage&Version=2017-11-07&image_url=https://ks3-cn-beijing.ksyun.com/imgdb/vision.jpg HTTP/1.1
+   Authorization: 
+      AWS4-HMAC-SHA256 
+      Credential=AKLTfERrGQtUQNiiirSQFW7BzQ/20171129/cn-beijing-6/kir/aws4_request, 
+      SignedHeaders=host;x-amz-date, 
+      Signature=dd6a401930a04a78c1c1d374bd63f89a960355aef346d70b4b7d185c48a2ffe9
+   Content-Type: application/x-www-form-urlencoded
+   Host: kir.api.ksyun.com
+   X-Amz-Date: 20171129T100303Z

@@ -1,0 +1,20 @@
+Begin Time:2020-02-17 10:16:21.816
+[2020-02-17 10:16:21.816][P:178572/T:180008][AVNetSDKMgr.cpp:358][Info][0] Load avnetsdk library dynamically
+[2020-02-17 10:16:21.825][P:178572/T:180008][AVNetSDKMgr.cpp:382][Info][0] avnetsdk module handle: 0000000025170000
+
+[2020-02-17 10:16:21.825][P:178572/T:180008][AVNetSDKMgr.cpp:702][Info][0] Load configsdk dynamically
+[2020-02-17 10:16:21.830][P:178572/T:180008][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=0000000020290050, dwUser=0000000000000000].
+[2020-02-17 10:16:21.830][P:178572/T:180008][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2020-02-17 10:16:21.830][P:178572/T:180008][dhnetsdk.cpp:206][Info][0] Enter CLIENT_SetConnectTime:[nWaitTime=5000, nTryTimes=1].
+[2020-02-17 10:16:21.830][P:178572/T:180008][dhnetsdk.cpp:219][Info][0] Leave CLIENT_SetConnectTime.
+[2020-02-17 10:16:21.831][P:178572/T:180008][dhnetsdk.cpp:230][Info][0] Enter CLIENT_SetNetworkParam:[nWaittime=0, nConnectTime=10000, nConnectTryNum=0, nSubConnectSpaceTime=0, nGetDevInfoTime=0, nConnectBufSize=0, nGetConnInfoTime=3000, nSearchRecordTime=0, nsubDisconnetTime=0, byNetType=0, byPlaybackBufSize=0, bDetectDisconnTime=0, bKeepLifeInterval=0, nPicBufSize=0].
+[2020-02-17 10:16:21.831][P:178572/T:180008][dhnetsdk.cpp:245][Info][0] Leave CLIENT_SetNetworkParam.
+[2020-02-17 10:17:02.355][P:178572/T:180008][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=192.168.1.106, port=37777, SpeCap=0, lpDeviceInfo=00000000202AE190.]
+[2020-02-17 10:17:02.528][P:178572/T:180008][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=566615600.]
+[2020-02-17 10:17:02.534][P:178572/T:180008][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=0000000020290090, dwUser=0000000000000000.]
+[2020-02-17 10:17:02.534][P:178572/T:180008][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2020-02-17 10:17:11.621][P:178572/T:180008][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=566615600. nChannelID=0. rType=0]
+[2020-02-17 10:17:11.657][P:178572/T:180008][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 37777
+[2020-02-17 10:17:11.942][P:178572/T:180008][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=566700624]
+[2020-02-17 10:17:16.730][P:178572/T:180008][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=566700624.]
+[2020-02-17 10:17:16.742][P:178572/T:180008][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]

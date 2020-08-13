@@ -1,0 +1,215 @@
+package com.bhyh.service.impl;
+
+import org.apache.shiro.authc.AuthenticationException;
+import org.springframework.stereotype.Service;
+import com.bhyh.exception.CheckedException;
+import com.bhyh.netsdk.common.SavePath;
+import com.bhyh.netsdk.demo.frame.ThermalCamera.TemperQueryDialog.QUERY_TYPE;
+import com.bhyh.netsdk.demo.module.CapturePictureModule;
+import com.bhyh.netsdk.demo.module.LoginModule;
+import com.bhyh.netsdk.demo.module.ThermalCameraModule;
+import com.bhyh.netsdk.lib.NetSDKLib.LLong;
+import com.bhyh.netsdk.lib.NetSDKLib.NET_IN_RADIOMETRY_STARTFIND;
+import com.bhyh.netsdk.lib.NetSDKLib.NET_OUT_RADIOMETRY_DOFIND;
+import com.bhyh.netsdk.lib.NetSDKLib.NET_TIME;
+import com.bhyh.service.IDhThermalCameralService;
+import com.bhyh.utils.sdk.BhDisConnect;
+import com.bhyh.utils.sdk.BhHaveReConnect;
+import com.bhyh.utils.sdk.BhNetTime;
+@Service
+public /* abstract */ class DhThermalCameralService implements IDhThermalCameralService{
+	/** 登录标志*/
+	public static boolean loginFlag = false;
+	//是否正在实时预览This field indicates whether the device is playing 
+	public static boolean bRealPlay = false;
+	//是否正在定时抓取 This field indicates whether the device is timing capture
+	public static boolean bTimerCapture = false;
+	
+	// device disconnect callback instance
+	private static BhDisConnect disConnect = new BhDisConnect(); 
+			
+	// device reconnect callback instance
+	private static BhHaveReConnect haveReConnect = new BhHaveReConnect();
+	
+	public static int pageNow = 0;//偏移页码数
+	// device disconnect callback instance
+//	private static DisConnect disConnect       = new DisConnect(); 
+		
+	// device reconnect callback instance
+//	private static HaveReConnect haveReConnect = new HaveReConnect();
+	
+	/**
+	 * 登录动作
+	 * @param ip 
+	 * @param port 端口
+	 * @param userNm 用户名
+	 * @param pwd 密码
+	 * @return
+	 */
+	@Override
+	public Object login(String ip, int port, String userNm, String pwd) {
+		System.out.println("++++++++++");
+		System.out.println("***********");
+		//先初始化
+		LoginModule.init(disConnect, haveReConnect);
+		//登陆动作
+		boolean login = LoginModule.login(ip, port ,userNm, pwd);
+		if(login)
+			loginFlag = login;
+		return login;
+	}
+	/**
+	* 查询历史温度 
+	* @param type 查询类型 (本页，上页，下页)
+	* @param currentIndex 当前页码（默认从0页开始，且只允许上页下页，不提供跳页）
+	* @param stuStartFind 查询参数类
+	*/
+	@Override
+	public Object queryHistoryInfo(String type, NET_IN_RADIOMETRY_STARTFIND stuStartFind) {		
+		//setStuStartFind();
+		//queryHistoryInfo(QUERY_TYPE.FIRST_PAGE_QUERY);
+
+			
+//			setTime(stuStartFind.stStartTime, startTimeBtn.getText());
+//			setTime(stuStartFind.stEndTime, endTimeBtn.getText());
+//			stuStartFind.nMeterType = meterTypeComboBox.getSelectedIndex() + 1;
+//			stuStartFind.nChannel = ThermalCameraFrame.THERMAL_CHANNEL;
+//			int[] arrPeriod = {5, 10, 15, 30};
+//			stuStartFind.emPeriod = arrPeriod[periodComboBox.getSelectedIndex()];
+		
+		
+		
+		if(!loginFlag)
+			throw new CheckedException("您未登录，请先登录");
+		int offset = 0;//偏移数据条数
+		int pageNow = 0;//当前页，默认从第0页
+		int pageCount = 20;//每页显示条数
+		try {
+			switch(type) {
+				case "FIRST_PAGE_QUERY":
+					ThermalCameraModule.stopFind();
+					if (!ThermalCameraModule.startFind(stuStartFind)) {
+						return null;
+					}
+					//重置
+					offset = 0;
+					break;
+				case "PRE_PAGE_QUERY":
+					offset = ((pageNow-1)/pageCount-1) * pageCount;
+					break;
+				case "NEXT_PAGE_QUERY":
+					offset = pageNow;
+					break;
+				default:
+					break;
+			}
+		}catch (Exception e) {
+			
+		}				
+		//调用查询方法
+		NET_OUT_RADIOMETRY_DOFIND stuDoFind = ThermalCameraModule.doFind(offset, pageCount);
+
+		return stuDoFind;
+	}
+//	public Object setStuStartFind(String startTime, String endTIme, int meterType, int channel, long period);
+//	LoginModule.init(disConnect, haveReConnect);   // 打开工程，初始化
+
+	@Override
+	public void realyPlay(int channel, int stream, String window) {
+		// TODO Auto-generated method stub
+		
+	}
+	/**
+	 * 本地抓图
+	 * 
+	 */
+	@Override
+	public Object localCapture() {
+	
+	
+		LLong m_hPlayHandle = new LLong(0);
+		if (!bRealPlay) {
+			//JOptionPane.showMessageDialog(null, Res.string().getNeedStartRealPlay(), Res.string().getErrorMessage(), JOptionPane.ERROR_MESSAGE);
+			return null;
+		}
+		String strFileName = SavePath.getSavePath().getSaveCapturePath();
+		System.out.println("strFileName = " + strFileName);
+		
+		if(!CapturePictureModule.localCapturePicture(m_hPlayHandle, strFileName)) {
+		//	JOptionPane.showMessageDialog(null, ToolKits.getErrorCodeShow(), Res.string().getErrorMessage(), JOptionPane.ERROR_MESSAGE);
+			return null;
+		}
+		return null;
+	}
+	/**
+	*
+	*@param channel 通道号
+	*/
+	@Override
+	public Object remoteCapture(int channel) {
+		if(loginFlag) {
+			try {
+				CapturePictureModule.remoteCapturePicture(channel);
+				return "success";
+			}catch (Exception e) {
+				throw new RuntimeException("远程抓图失败=========");
+			}		
+		}
+		throw new AuthenticationException();
+	}
+	/**
+	 * 
+	 */
+	@Override
+	public Object timerCapture(int channel) {
+		
+		boolean bTimerCapture = false;
+		int channelNum = 999;
+		
+		if (!bTimerCapture) {
+			
+			if (!CapturePictureModule.timerCapturePicture(/* chnComboBox.getSelectedIndex() */channelNum)) {
+		//		JOptionPane.showMessageDialog(null, ToolKits.getErrorCodeShow(), Res.string().getErrorMessage(), JOptionPane.ERROR_MESSAGE);
+			}else{
+				bTimerCapture = true;
+//				timerCaptureBtn.setText(Res.string().getStopCapture());
+//				chnComboBox.setEnabled(false);
+//				remoteCaptureBtn.setEnabled(false);
+			}
+		}else {
+			if(!CapturePictureModule.stopCapturePicture(/* chnComboBox.getSelectedIndex() */channelNum)) {
+		//		JOptionPane.showMessageDialog(null, ToolKits.getErrorCodeShow(), Res.string().getErrorMessage(), JOptionPane.ERROR_MESSAGE);
+			}else{
+				bTimerCapture = false;
+	//			timerCaptureBtn.setText(Res.string().getTimerCapture());
+	//			chnComboBox.setEnabled(true && !bRealPlay);
+	//			remoteCaptureBtn.setEnabled(true);
+			}
+		}
+		return null;
+	}
+	private void setStuStartFind(String startTime, String endTime, int meterType, int channel, int index) {
+		
+		NET_IN_RADIOMETRY_STARTFIND stuStartFind = null;			
+			setTime(stuStartFind.stStartTime, startTime);
+			setTime(stuStartFind.stEndTime, endTime);
+			stuStartFind.nMeterType = meterType;
+			stuStartFind.nChannel = channel;
+			int[] arrPeriod = {5, 10, 15, 30};
+			stuStartFind.emPeriod = arrPeriod[index];
+	}
+	private void setTime(BhNetTime netTime, String date) {
+		  
+    	String[] dateTime = date.split(" ");
+        String[] arrDate = dateTime[0].split("-");
+        String[] arrTime = dateTime[1].split(":");
+        
+        netTime.dwYear = Integer.parseInt(arrDate[0]);
+        netTime.dwMonth = Integer.parseInt(arrDate[1]);
+        netTime.dwDay = Integer.parseInt(arrDate[2]);
+        netTime.dwHour = Integer.parseInt(arrTime[0]);
+        netTime.dwMinute = Integer.parseInt(arrTime[1]);
+        netTime.dwSecond = Integer.parseInt(arrTime[2]);
+	}
+	
+}

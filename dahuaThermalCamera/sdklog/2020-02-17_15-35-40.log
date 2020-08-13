@@ -1,0 +1,42 @@
+Begin Time:2020-02-17 15:35:40.097
+[2020-02-17 15:35:40.097][P:180568/T:179700][AVNetSDKMgr.cpp:358][Info][0] Load avnetsdk library dynamically
+[2020-02-17 15:35:40.105][P:180568/T:179700][AVNetSDKMgr.cpp:382][Info][0] avnetsdk module handle: 0000000024310000
+
+[2020-02-17 15:35:40.105][P:180568/T:179700][AVNetSDKMgr.cpp:702][Info][0] Load configsdk dynamically
+[2020-02-17 15:35:40.110][P:180568/T:179700][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=0000000020CF0050, dwUser=0000000000000000].
+[2020-02-17 15:35:40.110][P:180568/T:179700][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2020-02-17 15:35:40.110][P:180568/T:179700][dhnetsdk.cpp:206][Info][0] Enter CLIENT_SetConnectTime:[nWaitTime=5000, nTryTimes=1].
+[2020-02-17 15:35:40.110][P:180568/T:179700][dhnetsdk.cpp:219][Info][0] Leave CLIENT_SetConnectTime.
+[2020-02-17 15:35:40.111][P:180568/T:179700][dhnetsdk.cpp:230][Info][0] Enter CLIENT_SetNetworkParam:[nWaittime=0, nConnectTime=10000, nConnectTryNum=0, nSubConnectSpaceTime=0, nGetDevInfoTime=0, nConnectBufSize=0, nGetConnInfoTime=3000, nSearchRecordTime=0, nsubDisconnetTime=0, byNetType=0, byPlaybackBufSize=0, bDetectDisconnTime=0, bKeepLifeInterval=0, nPicBufSize=0].
+[2020-02-17 15:35:40.111][P:180568/T:179700][dhnetsdk.cpp:245][Info][0] Leave CLIENT_SetNetworkParam.
+[2020-02-17 15:35:59.384][P:180568/T:179700][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=192.168.1.106, port=37777, SpeCap=0, lpDeviceInfo=00000000021BE190.]
+[2020-02-17 15:35:59.569][P:180568/T:179700][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=551149584.]
+[2020-02-17 15:35:59.578][P:180568/T:179700][dhnetsdk.cpp:6994][Info][0] Enter CLIENT_SetSnapRevCallBack. [OnSnapRevMessage=0000000020CF0090, dwUser=0000000000000000.]
+[2020-02-17 15:35:59.578][P:180568/T:179700][dhnetsdk.cpp:6997][Info][0] Leave CLIENT_SetSnapRevCallBack.
+[2020-02-17 15:36:17.032][P:180568/T:179700][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=551149584. nChannelID=0. rType=0]
+[2020-02-17 15:36:17.091][P:180568/T:179700][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 37777
+[2020-02-17 15:36:17.136][P:180568/T:179700][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=551158288]
+[2020-02-17 15:36:29.854][P:180568/T:179700][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=551158288.]
+[2020-02-17 15:36:29.861][P:180568/T:179700][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2020-02-17 15:36:31.679][P:180568/T:179700][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=551149584. nChannelID=0. rType=0]
+[2020-02-17 15:36:31.686][P:180568/T:179700][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 37777
+[2020-02-17 15:36:31.715][P:180568/T:179700][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=551158288]
+[2020-02-17 15:36:44.041][P:180568/T:179700][dhnetsdk.cpp:2320][Info][0] Enter CLIENT_CapturePictureEx. [hPlayHandle=551158288. pchPicFileName=D:\java_codes\eclipse_codes_bak\margin_device_refine_from_intelligent\tokenDemo\.\Capture\2020-02-17/2020-02-17_15-36-44.jpg, eFormat=1.]
+[2020-02-17 15:36:44.100][P:180568/T:179700][dhnetsdk.cpp:2341][Info][0] Leave CLIENT_CapturePictureEx.[ret=1.]
+[2020-02-17 15:39:01.239][P:180568/T:179700][dhnetsdk.cpp:7034][Info][0] Enter CLIENT_SnapPictureEx. [lLoginID=551149584, par=00000000021BE0D0, reserved=00000000021BE390.]
+[2020-02-17 15:39:01.239][P:180568/T:179700][dhnetsdk.cpp:7054][Info][0] Leave CLIENT_SnapPictureEx. [ret=1.]
+[2020-02-17 15:39:27.534][P:180568/T:179700][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=551158288.]
+[2020-02-17 15:39:27.540][P:180568/T:179700][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2020-02-17 15:39:34.798][P:180568/T:179700][dhnetsdk.cpp:7034][Info][0] Enter CLIENT_SnapPictureEx. [lLoginID=551149584, par=00000000021BED00, reserved=00000000021BE170.]
+[2020-02-17 15:39:34.798][P:180568/T:179700][dhnetsdk.cpp:7054][Info][0] Leave CLIENT_SnapPictureEx. [ret=1.]
+[2020-02-17 15:41:01.006][P:180568/T:179700][dhnetsdk.cpp:7034][Info][0] Enter CLIENT_SnapPictureEx. [lLoginID=551149584, par=00000000021BEEE0, reserved=00000000021B1350.]
+[2020-02-17 15:41:01.007][P:180568/T:179700][dhnetsdk.cpp:7054][Info][0] Leave CLIENT_SnapPictureEx. [ret=1.]
+[2020-02-17 15:58:37.652][P:180568/T:179700][dhnetsdk.cpp:7034][Info][0] Enter CLIENT_SnapPictureEx. [lLoginID=551149584, par=00000000021BEF10, reserved=00000000021BE390.]
+[2020-02-17 15:58:37.652][P:180568/T:179700][dhnetsdk.cpp:7054][Info][0] Leave CLIENT_SnapPictureEx. [ret=1.]
+[2020-02-17 15:58:40.523][P:180568/T:179700][dhnetsdk.cpp:7034][Info][0] Enter CLIENT_SnapPictureEx. [lLoginID=551149584, par=00000000021BECA0, reserved=00000000021BE170.]
+[2020-02-17 15:58:40.524][P:180568/T:179700][dhnetsdk.cpp:7054][Info][0] Leave CLIENT_SnapPictureEx. [ret=1.]
+[2020-02-17 15:59:07.107][P:180568/T:179700][dhnetsdk.cpp:7034][Info][0] Enter CLIENT_SnapPictureEx. [lLoginID=551149584, par=00000000021BED60, reserved=00000000021BE0D0.]
+[2020-02-17 15:59:07.108][P:180568/T:179700][dhnetsdk.cpp:7054][Info][0] Leave CLIENT_SnapPictureEx. [ret=1.]
+[2020-02-17 16:37:38.662][P:180568/T:179700][dhnetsdk.cpp:811][Info][0] Enter CLIENT_Logout. [lLoginID=551149584.]
+[2020-02-17 16:37:38.669][P:180568/T:179700][TPTCPClient.cpp:514][Error][90010007] Device is not online, ip:192.168.1.106
+[2020-02-17 16:37:38.669][P:180568/T:179700][dhnetsdk.cpp:833][Info][0] Leave CLIENT_Logout. [ret=1]

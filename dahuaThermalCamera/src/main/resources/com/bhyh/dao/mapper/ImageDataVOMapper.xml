@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bhyh.dao.mapper.ImageDataVOMapper">
+  <resultMap id="BaseResultMap" type="com.bhyh.model.vo.ImageDataVO">
+    <id column="id" jdbcType="VARCHAR" property="image_id" />
+    <result column="image_url" jdbcType="VARCHAR" property="imageUrl" />
+    <result column="suggest_summary" jdbcType="VARCHAR" property="suggestSummary" />
+    <result column="suggest_summary_code" jdbcType="VARCHAR" property="suggestSummaryCode" />
+    <result column="results" jdbcType="BLOB" property="results" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    image_id, image_url, suggest_summary, suggest_summary_code, results, status, update_time, create_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from bh_margin_token_image
+    where image_id = #{id,jdbcType=INTEGER}
+  </select>
+  
+  <insert id="insert" parameterType="com.bhyh.model.vo.ImageDataVO">
+  <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into bh_margin_token_image (image_url, suggest_summary, suggest_summary_code, results, status, update_time, create_time)
+    values (#{imageUrl,jdbcType=VARCHAR}, #{suggestSummary,jdbcType=VARCHAR}, #{suggestSummaryCode,jdbcType=VARCHAR}, #{results,jdbcType=BLOB}, #{status,jdbcType=TINYINT}, #{updateTime,jdbcType=TIMESTAMP},
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  
+ <!--  <insert id="insert" parameterType="com.bhyh.model.ImageDataVO">
+    insert into bh_margin_token_image (image_id, image_url, suggest_summary, suggest_summary_code, results, status, create_time, update_time)
+    values (#{id,jdbcType=VARCHAR}, #{imageUrl,jdbcType=VARCHAR}, #{suggestSummary,jdbcType=VARCHAR}, #{suggestSummaryCode,jdbcType=VARCHAR}, #{results,jdbcType=BLOB}, #{status,jdbcType=TINYINT}, #{updateTime,jdbcType=TIMESTAMP},
+      #{createTime,jdbcType=TIMESTAMP})
+  </insert> -->
+  
+</mapper>

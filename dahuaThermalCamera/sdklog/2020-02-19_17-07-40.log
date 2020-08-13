@@ -1,0 +1,13 @@
+Begin Time:2020-02-19 17:08:19.022
+[2020-02-19 17:08:19.022][P:2636/T:15124][AVNetSDKMgr.cpp:358][Info][0] Load avnetsdk library dynamically
+[2020-02-19 17:08:19.031][P:2636/T:15124][AVNetSDKMgr.cpp:382][Info][0] avnetsdk module handle: 0000000028F50000
+
+[2020-02-19 17:08:19.031][P:2636/T:15124][AVNetSDKMgr.cpp:702][Info][0] Load configsdk dynamically
+[2020-02-19 17:08:49.666][P:2636/T:15124][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=0000000000DE0050, dwUser=0000000000000000].
+[2020-02-19 17:08:49.666][P:2636/T:15124][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2020-02-19 17:08:59.951][P:2636/T:15124][dhnetsdk.cpp:206][Info][0] Enter CLIENT_SetConnectTime:[nWaitTime=5000, nTryTimes=1].
+[2020-02-19 17:08:59.951][P:2636/T:15124][dhnetsdk.cpp:219][Info][0] Leave CLIENT_SetConnectTime.
+[2020-02-19 17:09:11.098][P:2636/T:15124][dhnetsdk.cpp:230][Info][0] Enter CLIENT_SetNetworkParam:[nWaittime=0, nConnectTime=10000, nConnectTryNum=0, nSubConnectSpaceTime=0, nGetDevInfoTime=0, nConnectBufSize=0, nGetConnInfoTime=3000, nSearchRecordTime=0, nsubDisconnetTime=0, byNetType=0, byPlaybackBufSize=0, bDetectDisconnTime=0, bKeepLifeInterval=0, nPicBufSize=0].
+[2020-02-19 17:09:11.098][P:2636/T:15124][dhnetsdk.cpp:245][Info][0] Leave CLIENT_SetNetworkParam.
+[2020-02-19 17:12:27.477][P:2636/T:15124][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=192.168.1.106, port=37777, SpeCap=0, lpDeviceInfo=0000000025C2E2E0.]
+[2020-02-19 17:12:27.649][P:2636/T:15124][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=598272160.]

@@ -1,0 +1,52 @@
+Begin Time:2020-02-20 16:43:01.367
+[2020-02-20 16:43:01.367][P:15792/T:944][AVNetSDKMgr.cpp:358][Info][0] Load avnetsdk library dynamically
+[2020-02-20 16:43:01.376][P:15792/T:944][AVNetSDKMgr.cpp:382][Info][0] avnetsdk module handle: 0000000024680000
+
+[2020-02-20 16:43:01.376][P:15792/T:944][AVNetSDKMgr.cpp:702][Info][0] Load configsdk dynamically
+[2020-02-20 16:43:01.381][P:15792/T:944][dhnetsdk.cpp:186][Info][0] Enter CLIENT_SetAutoReconnect:[cbAutoConnect=000000001F550050, dwUser=0000000000000000].
+[2020-02-20 16:43:01.381][P:15792/T:944][dhnetsdk.cpp:188][Info][0] Leave CLIENT_SetAutoReconnect.
+[2020-02-20 16:43:01.381][P:15792/T:944][dhnetsdk.cpp:206][Info][0] Enter CLIENT_SetConnectTime:[nWaitTime=5000, nTryTimes=1].
+[2020-02-20 16:43:01.381][P:15792/T:944][dhnetsdk.cpp:219][Info][0] Leave CLIENT_SetConnectTime.
+[2020-02-20 16:43:01.382][P:15792/T:944][dhnetsdk.cpp:230][Info][0] Enter CLIENT_SetNetworkParam:[nWaittime=0, nConnectTime=10000, nConnectTryNum=0, nSubConnectSpaceTime=0, nGetDevInfoTime=0, nConnectBufSize=0, nGetConnInfoTime=3000, nSearchRecordTime=0, nsubDisconnetTime=0, byNetType=0, byPlaybackBufSize=0, bDetectDisconnTime=0, bKeepLifeInterval=0, nPicBufSize=0].
+[2020-02-20 16:43:01.382][P:15792/T:944][dhnetsdk.cpp:245][Info][0] Leave CLIENT_SetNetworkParam.
+[2020-02-20 16:49:06.365][P:15792/T:944][dhnetsdk.cpp:582][Info][0] Enter CLIENT_LoginEx2. [IP=192.168.1.106, port=37777, SpeCap=0, lpDeviceInfo=000000001F8BE400.]
+[2020-02-20 16:49:06.552][P:15792/T:944][dhnetsdk.cpp:618][Info][0] Leave CLIENT_LoginEx2. [error=0, login ID=528663728.]
+[2020-02-20 16:49:12.431][P:15792/T:944][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=528663728. nChannelID=0. rType=0]
+[2020-02-20 16:49:12.471][P:15792/T:944][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 37777
+[2020-02-20 16:49:12.680][P:15792/T:944][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=528154512]
+[2020-02-20 16:49:14.948][P:15792/T:944][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=528154512.]
+[2020-02-20 16:49:14.961][P:15792/T:944][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2020-02-20 16:49:15.915][P:15792/T:944][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=528663728. nChannelID=1. rType=0]
+[2020-02-20 16:49:15.920][P:15792/T:944][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 37777
+[2020-02-20 16:49:15.950][P:15792/T:944][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=528154512]
+[2020-02-20 16:49:17.252][P:15792/T:944][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=528154512.]
+[2020-02-20 16:49:17.264][P:15792/T:944][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2020-02-20 16:49:20.356][P:15792/T:944][dhnetsdk.cpp:1024][Info][0] Enter CLIENT_RealPlayEx. [lLoginID=528663728. nChannelID=1. rType=0]
+[2020-02-20 16:49:20.362][P:15792/T:944][DevConfigEx.cpp:9721][Info][0] IN SetupSession PORT=0 and PORT: 37777
+[2020-02-20 16:49:20.393][P:15792/T:944][dhnetsdk.cpp:1085][Info][0] Leave CLIENT_RealPlayEx. [ret=528154512]
+[2020-02-20 16:49:22.220][P:15792/T:944][dhnetsdk.cpp:1518][Info][0] Enter CLIENT_StopRealPlayEx. [lRealHandle=528154512.]
+[2020-02-20 16:49:22.228][P:15792/T:944][dhnetsdk.cpp:1532][Info][0] Leave CLIENT_StopRealPlayEx. [ret=1]
+[2020-02-20 16:49:42.854][P:15792/T:16756][dhnetsdk.cpp:17375][Info][0] Enter CLIENT_StartFind. [lLoginID=528663728, emType=0,  pInBuf=000000001F8BE4D0,  pOutBuf=000000001F8BE520, nWaitTime=5000.]
+[2020-02-20 16:49:42.864][P:15792/T:16756][dhnetsdk.cpp:17380][Info][0] Leave CLIENT_StartFind. [ret=0]
+[2020-02-20 16:49:42.864][P:15792/T:16756][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:49:42.864][P:15792/T:16756][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000015.]
+[2020-02-20 16:49:42.864][P:15792/T:16756][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:49:42.864][P:15792/T:16756][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000015.]
+[2020-02-20 16:49:42.880][P:15792/T:944][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:49:42.880][P:15792/T:944][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=0.]
+[2020-02-20 16:49:50.453][P:15792/T:2552][dhnetsdk.cpp:17375][Info][0] Enter CLIENT_StartFind. [lLoginID=528663728, emType=0,  pInBuf=000000001F8BE4D0,  pOutBuf=000000001F8BE8D0, nWaitTime=5000.]
+[2020-02-20 16:49:50.458][P:15792/T:2552][dhnetsdk.cpp:17380][Info][0] Leave CLIENT_StartFind. [ret=0]
+[2020-02-20 16:49:50.458][P:15792/T:2552][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:49:50.458][P:15792/T:2552][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000015.]
+[2020-02-20 16:49:50.458][P:15792/T:2552][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:49:50.458][P:15792/T:2552][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000015.]
+[2020-02-20 16:49:50.486][P:15792/T:944][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:49:50.486][P:15792/T:944][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=0.]
+[2020-02-20 16:50:26.357][P:15792/T:944][dhnetsdk.cpp:17317][Info][0] Enter CLIENT_QueryDevInfo. [lLoginID=528663728, nQueryType=12, pInBuf=000000001F8BE8F0, pOutBuf=000000001F8BE110, pReserved=0000000000000000, nWaitTime=3000.]
+[2020-02-20 16:50:26.374][P:15792/T:944][dhnetsdk.cpp:17333][Info][0] Leave CLIENT_QueryDevInfo. [ret=0]
+[2020-02-20 16:50:26.374][P:15792/T:944][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:50:26.374][P:15792/T:944][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000015.]
+[2020-02-20 16:50:26.375][P:15792/T:944][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:50:26.375][P:15792/T:944][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000015.]
+[2020-02-20 16:50:26.375][P:15792/T:944][dhnetsdk.cpp:6505][Info][0] Enter CLIENT_GetLastError.
+[2020-02-20 16:50:26.375][P:15792/T:944][dhnetsdk.cpp:6508][Info][0] Leave CLIENT_GetLastError.[Error code=80000015.]

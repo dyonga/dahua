@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.ASPECTJRT_LIB=C\:/Users/Administrator/.p2/pool/plugins/org.aspectj.runtime_1.9.2.201911072000.jar
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=D\:/dev_install/jee-2019-09/eclipse/
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=D\:/dev_install/java/jre/lib/rt.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/Users/Administrator/.p2/pool/plugins/org.junit_4.12.0.v201504281640/
+org.eclipse.jdt.core.classpathVariable.M2_REPO=D\:/maven_repository/RepositoryMaven
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
+org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
